@@ -5,7 +5,6 @@ import Checkout from './Components/Checkout';
 import ContactPage from './Components/ContactPage';
 import SuccessPage from './Components/SuccessPage';
 import FailurePage from './Components/FailurePage';
-import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/failure" element={<FailurePage />} />
         </Routes>
-        <ToastContainer />
+       
       </div>
     </Router>
   );

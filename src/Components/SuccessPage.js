@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from '../axios';
 import '../Styles/page.css';
 
+
 const SuccessPage = () => {
     const [page, setPage] = useState(null);
 
     useEffect(() => {
         axios.get('/payment/success')
             .then(response => {
-                // Ensure you access the correct data structure
                 if (response.data.status === 'success') {
                     setPage(response.data.data);
                 } else {
@@ -25,10 +25,12 @@ const SuccessPage = () => {
     }
 
     return (
-        <div >
+        <div style={{marginTop: 5 + 'em'}}>
             <img src={`${process.env.REACT_APP_IMAGE_PATH}${page.image}`} alt={page.title} style={{ width: '100px',height: '100px' }} />
             <h1>{page.title}</h1>
-            <p>{page.description}</p>
+            <p>{page.description}</p><br></br>
+            Go to <button><a href='/' style={{ textDecoration: 'none' }}> Home</a></button>
+                
         </div>
     );
 };

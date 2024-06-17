@@ -9,7 +9,6 @@ const FailurePage = () => {
     useEffect(() => {
         axios.get('/payment/failure')
             .then(response => {
-                // Ensure you access the correct data structure
                 if (response.data.status === 'success') {
                     setPage(response.data.data);
                 } else {
@@ -25,10 +24,11 @@ const FailurePage = () => {
         return <div>Loading...</div>;
     }
    return (
-        <div >
+        <div style={{marginTop: 5 + 'em'}}>
             <img src={`${process.env.REACT_APP_IMAGE_PATH}${page.image}`} alt={page.title}  style={{ height: 100 }} />
             <h1>{page.title}</h1>
-            <p>{page.description}</p>
+            <p>{page.description}</p><br></br>
+            Go to <button><a href='/' style={{ textDecoration: 'none' }}> Home</a></button>
         </div>
     );
 };
