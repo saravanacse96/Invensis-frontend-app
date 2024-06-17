@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import PageList from './Components/PageList';
+import Checkout from './Components/Checkout';
+import ContactPage from './Components/ContactPage';
+import SuccessPage from './Components/SuccessPage';
+import FailurePage from './Components/FailurePage';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<PageList />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/success" element={<SuccessPage />} />
+          <Route path="/failure" element={<FailurePage />} />
+        </Routes>
+        <ToastContainer />
+      </div>
+    </Router>
   );
 }
 

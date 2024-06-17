@@ -1,0 +1,55 @@
+.StripeElement {
+    background-color: white;
+    padding: 16px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.StripeElement--focus {
+    /* Applies styles when the element receives focus */
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    /* Applies styles when the element is invalid */
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    /* Applies styles when the element is being autofilled */
+    background-color: #fefde5 !important;
+}
+
+
+
+/* Base styles for the CardElement */
+
+ .payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f8f9fa;
+}
+
+.PaymentLayout {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+} 
+#payId{
+    margin-top: 10px;
+    width: 20%;
+    height: 30px;
+    border-radius: 8px;
+    background-color: green;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#payId:hover {
+    background-color: rgb(50, 195, 205);
+}
